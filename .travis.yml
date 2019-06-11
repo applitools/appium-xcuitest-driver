@@ -21,18 +21,18 @@ jobs:
         - COVERALLS=1
         - _FORCE_LOGS=0
 
-    - stage:
-      name: Basic functional tests
-      if: *noncron
-      env:
-        - CI_METRICS=1
-        - TEST=functional/basic
-
-    - stage:
-      name: Driver functional tests
-      if: *noncron
-      env:
-        - TEST=functional/driver
+    # - stage:
+    #   name: Basic functional tests
+    #   if: *noncron
+    #   env:
+    #     - CI_METRICS=1
+    #     - TEST=functional/basic
+    #
+    # - stage:
+    #   name: Driver functional tests
+    #   if: *noncron
+    #   env:
+    #     - TEST=functional/driver
 
     - stage:
       name: Web tests
@@ -41,12 +41,12 @@ jobs:
         - CI_METRICS=1
         - TEST=functional/web
 
-    - stage:
-      name: Long tests
-      if: *noncron
-      env:
-        - CI_METRICS=1
-        - TEST=functional/long
+    # - stage:
+    #   name: Long tests
+    #   if: *noncron
+    #   env:
+    #     - CI_METRICS=1
+    #     - TEST=functional/long
 
     - stage:
       name: Smoke test on Xcode 10.1 web
