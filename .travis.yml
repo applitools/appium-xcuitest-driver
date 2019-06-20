@@ -198,7 +198,6 @@ install:
       pushd node_modules/appium-webdriveragent;
       carthage bootstrap --no-use-binaries;
       cp Cartfile.resolved Carthage;
-      mkdir -p ./Resources/WebDriverAgent.bundle;
       popd;
     else
       npm install --production;
